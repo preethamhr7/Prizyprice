@@ -16,7 +16,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.price.controller.HomeController;
+
 import com.price.model.BarCode;
 import com.price.model.Product;
 import com.price.model.ProductListing;
@@ -175,7 +175,7 @@ public class PrizyPriceDaoImpl implements PrizyPriceDao{
 		
 		product.setAveragePrice(average);
 		
-		double result = AddPercentage * sum / 100;
+		double result = AddPercentage * average / 100;
 		
 		product.setIdealPrice(result + average);
 		
