@@ -15,13 +15,13 @@ public class Product {
 	
 	private String ProductDesc;
 	
-	private String BarCode;
+	private int BarCode;
 
-	public String getBarCode() {
+	public int getBarCode() {
 		return BarCode;
 	}
 
-	public void setBarCode(String barCode) {
+	public void setBarCode(int barCode) {
 		BarCode = barCode;
 	}
 

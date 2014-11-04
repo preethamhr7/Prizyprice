@@ -125,7 +125,7 @@ public class PrizyPriceDaoImpl implements PrizyPriceDao{
 		logger.info("Bar code id is : "+barCodeId);
 	
 		String BarCode = getBarCodeById(barCodeId);
-		String ProductDesc = getProductDesc(BarCode);
+		String ProductDesc = getProductDesc(barCodeId);
 		
 		logger.info("Bar code from id is "+BarCode+" And product  Desc  is :"+ProductDesc);
 		product.setProductDesc(ProductDesc);
@@ -183,7 +183,7 @@ public class PrizyPriceDaoImpl implements PrizyPriceDao{
 	}
 	
 	
-	public String getProductDesc(String BarCode){
+	public String getProductDesc(int BarCode){
 		
 		
 		String getProductForBarCode = "Select * from Product where BarCode=:BarCode;"; 
